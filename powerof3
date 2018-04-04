@@ -1,0 +1,52 @@
+
+package recursionPuzzles;
+
+public class powerof3 {
+
+    public static boolean Power(int num) {
+     double i=4;
+     if (i != num){
+     if (Math.pow(3, i) == num)
+            return true;
+     
+     else
+    	 return false;
+     }  return false;
+
+    }
+	
+
+public static void main(String [] args) {
+	// Local variables used for testing
+	boolean actualResult;
+	boolean expectedResult;
+	
+	// Test Number 1
+	actualResult = Power(81);	// Test the Base Case
+	expectedResult = true;					// Replace this line with what the actual expected result should be
+	if (actualResult == expectedResult)
+		System.out.println("Test 1: Pass; Result: " + actualResult);
+	else
+		System.out.println("Test 1: Fail; Result: " + actualResult + "; Expected: " + expectedResult);
+
+	// Test Number 2
+	actualResult = Power(90);	// Test one away from the Base Case
+	expectedResult = false;				// Replace this line with what the actual expected result should be
+	if (actualResult == expectedResult)
+		System.out.println("Test 2: Pass; Result: " + actualResult);
+	else
+		System.out.println("Test 2: Fail; Result: " + actualResult + "; Expected: " + expectedResult);
+	
+	// Test Number 3
+	actualResult = Power(8);	// Test a number of iterations away from the Base Case
+	expectedResult = false;			// Replace this line with what the actual expected result should be
+	if (actualResult == expectedResult)
+		System.out.println("Test 3: Pass; Result: " + actualResult);
+	else
+		System.out.println("Test 3: Fail; Result: " + actualResult + "; Expected: " + expectedResult);
+
+}
+
+}
+
+
