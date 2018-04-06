@@ -1,0 +1,29 @@
+
+class ddd 
+{
+  static int recursiveMin(int arr[], int length)
+  {
+    if (length == 1)
+      return arr[0];
+    return min(recursiveMin(arr, length - 1), arr[length - 1]);
+  }
+ 
+  private static int min(int n1, int n2)
+  {
+    return n1 < n2 ? n1 : n2;
+  }	
+  
+  public static void main(String[] args)
+  {
+	int arr[];
+	arr = new int[5];
+	arr[0] = 8;
+	arr[1] = 2;
+	arr[2] = 1;
+	arr[3] = 10;
+	arr[4] = 9;
+    
+    int min = recursiveMin(arr, arr.length);
+    System.out.println("Minimum element of this array is : " + min);
+  }
+}
