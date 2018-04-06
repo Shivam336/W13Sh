@@ -1,0 +1,32 @@
+
+public class sumofarray {
+	
+	public static int sum( int a[], int i, int n)
+	{
+		if (i == n-1)
+			return a[i];
+		
+		if (i == 0)
+			return ((a[i] + sum(a, i+1, n)));
+		
+		return (a[i] + sum(a, i+1, n));
+	}
+	
+	 // Function that return sum of an array.
+	 static double computesum(int a[], int n)
+	 {
+	      return sum(a, 0, n);
+	 }
+	 public static void main (String args[]){
+		int arr[];
+		arr = new int[5];
+		arr[0] = 2;
+		arr[1] = 2;
+		arr[2] = 2;
+		arr[3] = 2;
+		arr[4] = 2;
+		   int n = arr.length;
+		
+		System.out.println("The sum of the element of the array is " + computesum(arr,5 ));
+	}
+}
