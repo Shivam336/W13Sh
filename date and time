@@ -1,0 +1,76 @@
+
+import java.util.Scanner;
+public class Seconds {
+
+	public static void main (String args[]){
+		Scanner S1 = new Scanner(System.in);
+		System.out.print("Enter number of seconds ");
+		int seconds = S1.nextInt();
+		int y = seconds/60;
+		int x = seconds/3600;
+		int w = seconds /86400;
+		int z = seconds;
+		int a, b, c, d,e,f,g,h,i, im = 0;
+		
+		if  (seconds%86400 == 0){
+			if (w == 1)
+			System.out.println( w + " Day");
+			else
+					System.out.println( w + " Days");
+		}
+		else if (seconds < 86400){
+			if (seconds%3600 == 0){
+				if (x == 1){
+				System.out.println( x + " Hour " );	
+			}
+				else 
+					System.out.println( x + " Hours " );			
+		}
+			else if (seconds%60 ==0){
+				if ( y == 1){
+					System.out.println(y + " Minute");
+				}
+				else 
+					System.out.println(y + " Minutes");	
+			}
+			else if (seconds >= 3600){
+		
+					a = seconds/3600;
+					System.out.print(a + " hour "); 
+					g = seconds%3600;
+					h = g/60;
+					System.out.print(h+ " minutes ");
+					i = g%60;
+					System.out.print (i+ " seconds ");
+					
+				}
+          else if (seconds < 3600 && seconds >=60){
+			System.out.print(y + " minuts "); 
+			b = seconds%60;
+			System.out.print(b + " seconds"); 
+			
+		}
+		else if (seconds < 60){
+			System.out.print( seconds + " seconds"); 	
+		}			
+		}
+else if (seconds%86400 >=60 && seconds%86400 <= 3600 ) {
+				int j = seconds/86400;
+				System.out.print(j + " Day "); 
+				int k = seconds%86400;
+				if (k < 59){
+					System.out.println(j + " Days " + k +" Seconds");	
+				}
+				else if (k>=60|| k <=3600)
+				 im = k/3600;
+				System.out.print(im + " Hours ");
+				int dm = k%3600;
+				int em = dm/60;
+				System.out.print(em+ " Minutes ");
+				int jm = em%60;
+				System.out.print (jm+ " seconds ");
+			}
+else {
+System.out.println( "Input is wrong");
+}}}
+
